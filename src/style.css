@@ -1,0 +1,96 @@
+body {
+  background-color: rgb(189, 228, 243);
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1.3rem #038dbf,
+    0 0 0 0.2rem #038dbf, 0 0 1.3rem #038dbf, inset 0 0 1.3rem #038dbf;
+}
+
+H1,
+H2 {
+  font-family: "BhuTuka Expanded One", cursive;
+  display: block;
+  margin: 50 auto;
+  text-align: center;
+}
+
+h5 {
+  font-family: "Poiret One", cursive;
+  display: block;
+  margin: 50 auto;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: "BhuTuka Expanded One", cursive;
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+  aspect-ratio: 2/1;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card {
+  border-style: solid;
+  border-color: #038dbf;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.col-sm {
+  max-block-size: 10%;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-control {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 25%;
+  min-width: 200px;
+  border-style: solid;
+  border-color: #038dbf;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.header-image {
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 25%;
+  max-width: 300px;
+}
+
+.unit {
+  font-size: smaller;
+}
+.btn {
+  margin-bottom: 5px;
+}
+.btn-secondary {
+  --bs-btn-hover-bg: #038dbf;
+  --bs-btn-hover-border-color: #038dbf;
+}
