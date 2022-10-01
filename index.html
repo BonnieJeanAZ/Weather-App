@@ -25,27 +25,35 @@
     ></script>
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
+  </head>
   <body>
+    <div class="main">
     <div class="container">
-      <header>
+      <div class="header">
         <img
           src="./src/images/partly-cloudy.png"
           class="header-image"
           alt="header-image"
         />
-      </header>
-      <h1>Phoenix, Arizona</h1>
-      <h2>
-        <ul>
-          <li id="date"></li>
-          <li id="describe">partly cloudy</li>
-          <li class="unit" id="temp"><span class="changeTemp">99</span>
-            <span><sup>
-            <a href = "#" id=fahrenheit-link> °F </a> |
-            <a href = "#" id=celcius-link> °C </a> 
-          </sup></span></li>
-      </h2>
+
+        <h1>Phoenix, Arizona</h1>
+        <h3>
+          <div class="unit" id="temp">
+            <span class="changeTemp">99</span>
+            <span
+              ><sup>
+                <a href="#" id="fahrenheit-link">°F</a> |
+                <a href="#" id="celcius-link">°C</a>
+              </sup></span
+            >
+
+          <ul>
+            <li id="date"></li>
+            <li id="describe">partly cloudy</li>
+          </ul>
+        </h3>
+        </div>
+      </div>
       <br />
       <div class="row g-0">
         <div class="col-md">
@@ -114,23 +122,39 @@
           </div>
         </div>
       </div>
-    </div>
     <br />
     <form id="search-city">
-      <input type="text" placeholder="Search for a city" autocomplete="off" autofocus="on" id="search-text-input"/>
-        <button type="submit" value = "search" class="btn btn-secondary btn-sm">
-          <i class="fas fa-search"></i>
-        </button>  
-        <button id="location" type="submit" value = "locate" class="btn btn-secondary btn-sm">
-          <i class="fa-solid fa-location-dot"></i>
-        </button>
+      <input
+        type="text"
+        placeholder="Search for a city"
+        autocomplete="off"
+        autofocus="on"
+        id="search-text-input"
+      />
+      <button type="submit" value="search" class="btn btn-secondary btn-sm">
+        <i class="fas fa-search"></i>
+      </button>
+      <button
+        id="location"
+        type="submit"
+        value="locate"
+        class="btn btn-secondary btn-sm"
+      >
+        <i class="fa-solid fa-location-dot"></i>
+      </button>
     </form>
-    
+
     <script src="src/index.js"></script>
+
+    </div>
+  <footer>
+    <p>
+      <a href="https://github.com/BonnieJeanAZ/Weather-App">
+        Open-Source code</a
+      >
+      by Bonnie Runyan
+    </p>
+  </footer>
   </body>
-  <br />
-  <footer><p>
-    <a href="https://github.com/BonnieJeanAZ/Weather-App">
-    Open-Source code</a> 
-      by Bonnie Runyan</p></footer>
+  
 </html>

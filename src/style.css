@@ -1,4 +1,4 @@
-body {
+.main {
   background-color: rgb(189, 228, 243);
   border-style: solid;
   border-color: #fff;
@@ -10,11 +10,16 @@ body {
     0 0 0 0.2rem #038dbf, 0 0 1.3rem #038dbf, inset 0 0 1.3rem #038dbf;
 }
 
-H1,
-H2 {
+H1 {
   font-family: "BhuTuka Expanded One", cursive;
-  display: block;
+  font-size: xx-large;
+  display: inline block;
   margin: 50 auto;
+  text-align: center;
+}
+H3 {
+  font-family: "BhuTuka Expanded One", cursive;
+  font-size: large;
   text-align: center;
 }
 
@@ -27,6 +32,13 @@ h5 {
 
 ul {
   list-style: none;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+li {
+  text-align: center;
+  display: block;
 }
 
 p {
@@ -37,22 +49,45 @@ p {
 img {
   object-fit: cover;
   aspect-ratio: 2/1;
+  align-self: center;
 }
 
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
 }
-
-.card {
+.card.col-md {
   border-style: solid;
   border-color: #038dbf;
   border-width: 1px;
   border-radius: 5px;
+  align-items: center;
+  display: block;
 }
 
+.card.col-sm {
+  border-style: solid;
+  border-color: #038dbf;
+  border-width: 1px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 45%;
+  display: block;
+}
+.row {
+  align-items: center;
+  text-align: center;
+}
 .col-sm {
   max-block-size: 10%;
+  align-items: center;
+}
+.col-md {
+  max-block-size: 10%;
+  align-items: center;
+}
+.card-img-top {
+  width: 75%;
 }
 
 form {
@@ -84,8 +119,9 @@ form {
   max-width: 300px;
 }
 
-.unit {
-  font-size: smaller;
+.changeTemp {
+  font-size: 42px;
+  display: inline-block;
 }
 .btn {
   margin-bottom: 5px;
