@@ -10,17 +10,39 @@
     0 0 0 0.2rem #038dbf, 0 0 1.3rem #038dbf, inset 0 0 1.3rem #038dbf;
 }
 
-H1 {
+#icon {
+  display: inline;
+  text-align: right;
+  margin-right: 30px;
+  float: right;
+  width: 120px;
+  height: 120px;
+  transform: scale(1.5);
+}
+
+header {
+  width: 100%;
+}
+
+h1 {
   font-family: "BhuTuka Expanded One", cursive;
   font-size: xx-large;
-  display: inline block;
-  margin: 50 auto;
-  text-align: center;
+  display: inline-flex;
+  margin: 0 auto;
+  text-align: left;
 }
-H3 {
+h2 {
   font-family: "BhuTuka Expanded One", cursive;
-  font-size: large;
-  text-align: center;
+  font-size: 42px;
+  text-align: left;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+}
+h4 {
+  font-family: "BhuTuka Expanded One", cursive;
+  font-size: 18px;
+  text-align: left;
 }
 
 h5 {
@@ -37,7 +59,7 @@ ul {
 }
 
 li {
-  text-align: center;
+  text-align: left;
   display: block;
 }
 
@@ -46,10 +68,15 @@ p {
   text-align: center;
 }
 
-img {
+.card-img-top {
   object-fit: cover;
-  aspect-ratio: 2/1;
   align-self: center;
+  width: 75%;
+  aspect-ratio: 2/1;
+}
+
+a {
+  font-size: small;
 }
 
 .no-gutters {
@@ -78,17 +105,6 @@ img {
   align-items: center;
   text-align: center;
 }
-.col-sm {
-  max-block-size: 10%;
-  align-items: center;
-}
-.col-md {
-  max-block-size: 10%;
-  align-items: center;
-}
-.card-img-top {
-  width: 75%;
-}
 
 form {
   display: block;
@@ -109,24 +125,13 @@ form {
   border-radius: 5px;
 }
 
-.header-image {
-  display: block;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-height: 25%;
-  max-width: 300px;
-}
-
-.changeTemp {
-  font-size: 42px;
-  display: inline-block;
-}
 .btn {
   margin-bottom: 5px;
 }
 .btn-secondary {
   --bs-btn-hover-bg: #038dbf;
   --bs-btn-hover-border-color: #038dbf;
+}
+.separator {
+  font-size: 16px;
 }

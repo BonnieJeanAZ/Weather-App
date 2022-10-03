@@ -28,31 +28,29 @@
   </head>
   <body>
     <div class="main">
-    <div class="container">
       <div class="header">
-        <img
-          src="./src/images/partly-cloudy.png"
-          class="header-image"
-          alt="header-image"
-        />
-
         <h1>Phoenix, Arizona</h1>
-        <h3>
-          <div class="unit" id="temp">
-            <span class="changeTemp">99</span>
-            <span
-              ><sup>
-                <a href="#" id="fahrenheit-link">°F</a> |
-                <a href="#" id="celcius-link">°C</a>
-              </sup></span
+        <img src="" alt="" id="icon" />
+        <h2 class="changeTemp">
+          <span class="temp" id="temp">99°</span>
+          <sup>
+            <span class="fahrenheit">
+              <a href="#" id="fahrenheit-link">F</a></span
             >
+            <span class="separator"> | </span
+            ><span class="celcius">
+              <a href="#" id="celcius-link">C</a>
+            </span>
+          </sup>
+        </h2>
 
+        <h4>
           <ul>
             <li id="date"></li>
-            <li id="describe">partly cloudy</li>
+            <li id="describe"></li>
+            <li id="wind"></li>
           </ul>
-        </h3>
-        </div>
+        </h4>
       </div>
       <br />
       <div class="row g-0">
@@ -122,39 +120,37 @@
           </div>
         </div>
       </div>
-    <br />
-    <form id="search-city">
-      <input
-        type="text"
-        placeholder="Search for a city"
-        autocomplete="off"
-        autofocus="on"
-        id="search-text-input"
-      />
-      <button type="submit" value="search" class="btn btn-secondary btn-sm">
-        <i class="fas fa-search"></i>
-      </button>
-      <button
-        id="location"
-        type="submit"
-        value="locate"
-        class="btn btn-secondary btn-sm"
-      >
-        <i class="fa-solid fa-location-dot"></i>
-      </button>
-    </form>
+      <br />
+      <form id="search-city">
+        <input
+          type="text"
+          placeholder="Search for a city"
+          autocomplete="off"
+          autofocus="on"
+          id="search-text-input"
+        />
+        <button type="submit" value="search" class="btn btn-secondary btn-sm">
+          <i class="fas fa-search"></i>
+        </button>
+        <button
+          id="location"
+          type="submit"
+          value="locate"
+          class="btn btn-secondary btn-sm"
+        >
+          <i class="fa-solid fa-location-dot"></i>
+        </button>
+      </form>
 
-    <script src="src/index.js"></script>
-
+      <script src="src/index.js"></script>
     </div>
-  <footer>
-    <p>
-      <a href="https://github.com/BonnieJeanAZ/Weather-App">
-        Open-Source code</a
-      >
-      by Bonnie Runyan
-    </p>
-  </footer>
+    <footer>
+      <p>
+        <a href="https://github.com/BonnieJeanAZ/Weather-App">
+          Open-Source code</a
+        >
+        by Bonnie Runyan
+      </p>
+    </footer>
   </body>
-  
 </html>
