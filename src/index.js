@@ -19,7 +19,6 @@ if (minutes < 10) {
 let currentDate = document.querySelector("#date");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
-//week 5
 let apiKey = "72b85c02ee24267c23e26e56f991d70b";
 
 function searchCity(event) {
@@ -39,6 +38,7 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
   let description = response.data.weather[0].description;
+  let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed) + "mph wind";
 
   fahrenheit = Math.round(response.data.main.temp);
@@ -51,6 +51,9 @@ function showTemperature(response) {
 
   let descriptionElement = document.querySelector("h4 #describe");
   descriptionElement.innerHTML = `${description}`;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${humidity}% humidity`;
 
   let windElement = document.querySelector("h4 #wind");
   windElement.innerHTML = `${wind}`;
