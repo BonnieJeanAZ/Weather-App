@@ -41,7 +41,7 @@ h2 {
 }
 h4 {
   font-family: "BhuTuka Expanded One", cursive;
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
 }
 
@@ -60,7 +60,7 @@ ul {
 
 li {
   text-align: left;
-  display: block;
+  display: inline;
 }
 
 p {

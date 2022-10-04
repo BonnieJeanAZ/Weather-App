@@ -17,7 +17,7 @@ if (minutes < 10) {
 }
 
 let currentDate = document.querySelector("#date");
-currentDate.innerHTML = `${day} ${hours}:${minutes}`;
+currentDate.innerHTML = `last updated: ${day} at ${hours}:${minutes}`;
 
 let apiKey = "72b85c02ee24267c23e26e56f991d70b";
 
@@ -50,10 +50,10 @@ function showTemperature(response) {
   cityElement.innerHTML = `${city}`;
 
   let descriptionElement = document.querySelector("h4 #describe");
-  descriptionElement.innerHTML = `${description}`;
+  descriptionElement.innerHTML = `${description} | `;
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${humidity}% humidity`;
+  humidityElement.innerHTML = `${humidity}% humidity | `;
 
   let windElement = document.querySelector("h4 #wind");
   windElement.innerHTML = `${wind}`;
