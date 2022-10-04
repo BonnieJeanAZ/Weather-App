@@ -5,7 +5,7 @@
   border-width: 1px;
   border-radius: 5px;
   margin: 20px;
-  padding: 10px;
+  padding: 25px;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1.3rem #038dbf,
     0 0 0 0.2rem #038dbf, 0 0 1.3rem #038dbf, inset 0 0 1.3rem #038dbf;
 }
@@ -134,4 +134,14 @@ form {
 }
 .separator {
   font-size: 16px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
 }

@@ -61,7 +61,7 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
@@ -87,9 +87,18 @@ function currentPosition(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelcius);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
 function displayCelcius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("h2 #temp");
+
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 
   let celcius = (fahrenheit - 32) * (5 / 9);
   temperatureElement.innerHTML = Math.round(celcius) + "°";
@@ -98,12 +107,9 @@ function displayCelcius(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
 
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
   let temperatureElement = document.querySelector("h2 #temp");
   temperatureElement.innerHTML = Math.round(fahrenheit) + "°";
 }
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelcius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
