@@ -19,7 +19,7 @@ if (minutes < 10) {
 let currentDate = document.querySelector("#date");
 currentDate.innerHTML = `last updated: ${day} at ${hours}:${minutes}`;
 
-let apiKey = "72b85c02ee24267c23e26e56f991d70b";
+let apiKey = "a33b693cfbefd271b0ed075f9a8f65f0";
 
 function searchCity(event) {
   event.preventDefault();
@@ -33,6 +33,11 @@ function searchCity(event) {
 }
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", searchCity);
+
+function getforecast(coordinates) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -65,10 +70,13 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  getforecast(response.data.coord);
+
   form.reset();
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
 
@@ -101,7 +109,6 @@ function search(city) {
 }
 
 search("New York");
-displayForecast();
 
 let locateButton = document.querySelector("#location");
 locateButton.addEventListener("click", getCurrentCity);
