@@ -68,12 +68,40 @@ function showTemperature(response) {
   form.reset();
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+
+  forecastHTML = `<div class="row g-0">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-md">
+          <div class="card">
+            <img
+              src="./src/images/partly-cloudy.png"
+              class="card-img-top"
+              alt="today"
+            />
+            <div class="card-body">
+              <h5 class="card-title">${day}</h5>
+              <p class="card-text">102° / 82°</p>
+            </div>
+          </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
 }
 
 search("New York");
+displayForecast();
 
 let locateButton = document.querySelector("#location");
 locateButton.addEventListener("click", getCurrentCity);
