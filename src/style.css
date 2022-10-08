@@ -50,6 +50,7 @@ h5 {
   display: block;
   margin: 0 auto;
   text-align: center;
+  font-size: 16px;
 }
 
 ul {
@@ -64,8 +65,9 @@ li {
 }
 
 p {
-  font-family: "BhuTuka Expanded One", cursive;
+  font-family: "Poiret One", cursive;
   text-align: center;
+  font-size: 12px;
 }
 
 .card-img-top {
