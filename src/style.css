@@ -111,16 +111,3 @@ form {
   --bs-btn-hover-bg: #038dbf;
   --bs-btn-hover-border-color: #038dbf;
 }
-.separator {
-  font-size: 16px;
-}
-
-.active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-}
