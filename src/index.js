@@ -50,7 +50,7 @@ function displayForecast(response) {
         `<div class="col-12 col-md-2 col-lg-2">
           <div class="card">
             <img
-              src="http://openweathermap.org/img/wn/${
+              src="https://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }@2x.png"
               class="card-img-top"
@@ -125,14 +125,10 @@ function searchCity(event) {
   h1.innerHTML = inputCity.value;
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&units=imperial&appid=${apiKey}`;
-
   axios.get(apiUrl).then(showTemperature);
 }
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", searchCity);
-
-let locateButton = document.querySelector("#location");
-locateButton.addEventListener("click", getCurrentCity);
 
 function getCurrentCity() {
   navigator.geolocation.getCurrentPosition(currentPosition);
@@ -140,6 +136,11 @@ function getCurrentCity() {
 
 function currentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=${apiKey}`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
 }
+
+let locateButton = document.querySelector("#location");
+locateButton.addEventListener("click", getCurrentCity);
+
 search("New York");

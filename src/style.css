@@ -73,7 +73,7 @@ p {
 .card-img-top {
   object-fit: cover;
   align-self: center;
-  width: 42px;
+  width: 100px;
 }
 
 a {
