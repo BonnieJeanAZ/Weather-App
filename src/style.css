@@ -48,7 +48,7 @@ h4 {
 h5 {
   font-family: "Poiret One", cursive;
   display: block;
-  margin: 50 auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -71,8 +71,7 @@ p {
 .card-img-top {
   object-fit: cover;
   align-self: center;
-  width: 75%;
-  aspect-ratio: 2/1;
+  width: 42px;
 }
 
 a {
@@ -82,28 +81,6 @@ a {
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
-}
-.card.col-md {
-  border-style: solid;
-  border-color: #038dbf;
-  border-width: 1px;
-  border-radius: 5px;
-  align-items: center;
-  display: block;
-}
-
-.card.col-sm {
-  border-style: solid;
-  border-color: #038dbf;
-  border-width: 1px;
-  border-radius: 5px;
-  align-items: center;
-  max-width: 45%;
-  display: block;
-}
-.row {
-  align-items: center;
-  text-align: center;
 }
 
 form {
