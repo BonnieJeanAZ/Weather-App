@@ -42,7 +42,7 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  forecastHTML = `<div class="row g-0">`;
+  forecastHTML = `<div class="row g-1">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -130,13 +130,13 @@ function searchCity(event) {
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", searchCity);
 
-function getCurrentCity() {
+function getCurrentCity(event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentPosition);
 }
 
 function currentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=${apiKey}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
 }
 

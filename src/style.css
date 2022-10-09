@@ -1,32 +1,36 @@
 .main {
-  background-color: rgb(189, 228, 243);
+  background-image: url("../src/images/black_background.jpg");
+  background-position: center;
+  background-size: cover;
   border-style: solid;
   border-color: #fff;
   border-width: 1px;
   border-radius: 5px;
   margin: 20px;
   padding: 25px;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1.3rem #038dbf,
-    0 0 0 0.2rem #038dbf, 0 0 1.3rem #038dbf, inset 0 0 1.3rem #038dbf;
+  max-width: 70%;
 }
 
 #icon {
   display: inline;
   text-align: right;
   margin-right: 30px;
+  margin-top: -20px;
   float: right;
   width: 120px;
   height: 120px;
   transform: scale(1.5);
 }
 
-header {
+.header {
   width: 100%;
+  margin: 15px;
 }
 
 h1 {
   font-family: "BhuTuka Expanded One", cursive;
   font-size: xx-large;
+  color: #fff;
   display: inline-flex;
   margin: 0 auto;
   text-align: left;
@@ -34,6 +38,7 @@ h1 {
 h2 {
   font-family: "BhuTuka Expanded One", cursive;
   font-size: 42px;
+  color: #fff;
   text-align: left;
   display: block;
   margin: 0 auto;
@@ -41,16 +46,18 @@ h2 {
 }
 h4 {
   font-family: "BhuTuka Expanded One", cursive;
-  font-size: 14px;
+  font-size: 18px;
+  color: #fff;
   text-align: left;
 }
 
 h5 {
   font-family: "Poiret One", cursive;
+  color: #fff;
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 ul {
@@ -66,14 +73,17 @@ li {
 
 p {
   font-family: "Poiret One", cursive;
+  color: #fff;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .card-img-top {
   object-fit: cover;
   align-self: center;
   width: 100px;
+  height: 75px;
+  margin-top: 10px;
 }
 
 a {
@@ -110,4 +120,19 @@ form {
 .btn-secondary {
   --bs-btn-hover-bg: #038dbf;
   --bs-btn-hover-border-color: #038dbf;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.footer {
+  color: black;
+  text-align: center;
+  font-size: 12px;
+}
+
+.card-body {
+  padding: 2px, 2px, 2px, 15px;
+  height: 75px;
 }
