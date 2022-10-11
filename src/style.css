@@ -2,9 +2,8 @@
   background-image: url("../src/images/canyon.jpg");
   background-position: center;
   background-size: cover;
-  border: 2px double rgba(255, 255, 255, 0.4);
-  border-radius: 15px;
-  border-width: 1px;
+  border: 5px double rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
   margin: 5px;
   padding: 5px;
   max-width: 80%;
@@ -65,7 +64,7 @@ h5 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 ul {
@@ -98,6 +97,11 @@ p {
 
 a {
   font-size: small;
+  align-self: center;
+}
+
+a:hover {
+  color: #f96e18;
 }
 
 .no-gutters {
@@ -126,10 +130,11 @@ form {
 
 .btn {
   margin-bottom: 5px;
+  height: 30px;
 }
 .btn-secondary {
-  --bs-btn-hover-bg: #038dbf;
-  --bs-btn-hover-border-color: #038dbf;
+  --bs-btn-hover-bg: #f96e18;
+  --bs-btn-hover-border-color: #f96e18;
 }
 
 .card {
@@ -171,4 +176,5 @@ form {
   text-transform: lowercase;
   font-stretch: expanded;
   color: darkgrey;
+  border-radius: 5px;
 }
