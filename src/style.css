@@ -1,14 +1,13 @@
 .main {
-  background-image: url("../src/images/black_background.jpg");
+  background-image: url("../src/images/canyon.jpg");
   background-position: center;
   background-size: cover;
-  border-style: solid;
-  border-color: #fff;
+  border: 2px double rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
   border-width: 1px;
-  border-radius: 5px;
-  margin: 20px;
-  padding: 25px;
-  max-width: 70%;
+  margin: 5px;
+  padding: 5px;
+  max-width: 80%;
 }
 
 #icon {
@@ -19,17 +18,20 @@
   float: right;
   width: 120px;
   height: 120px;
-  transform: scale(1.5);
+  transform: scale(150%);
 }
 
 .header {
   width: 100%;
   margin: 15px;
+  margin-bottom: 0px;
 }
 
 h1 {
   font-family: "BhuTuka Expanded One", cursive;
+  font-weight: bolder;
   font-size: xx-large;
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.4);
   color: #fff;
   display: inline-flex;
   margin: 0 auto;
@@ -38,6 +40,7 @@ h1 {
 h2 {
   font-family: "BhuTuka Expanded One", cursive;
   font-size: 42px;
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.4);
   color: #fff;
   text-align: left;
   display: block;
@@ -45,14 +48,19 @@ h2 {
   align-items: center;
 }
 h4 {
-  font-family: "BhuTuka Expanded One", cursive;
-  font-size: 18px;
+  font-family: "Poiret One", cursive;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-transform: lowercase;
   color: #fff;
   text-align: left;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 h5 {
   font-family: "Poiret One", cursive;
+  text-transform: lowercase;
   color: #fff;
   display: block;
   margin: 0 auto;
@@ -73,6 +81,8 @@ li {
 
 p {
   font-family: "Poiret One", cursive;
+  text-transform: lowercase;
+  font-stretch: expanded;
   color: #fff;
   text-align: center;
   font-size: 14px;
@@ -123,16 +133,42 @@ form {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.25);
+  background: transparent;
+  border: none;
+}
+
+.row {
+  background-color: rgba(58, 10, 10, 0.5);
+  border: 5px double rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
 }
 
 .footer {
+  font-family: "Poiret One", cursive;
+  text-transform: lowercase;
+  font-stretch: expanded;
   color: black;
   text-align: center;
   font-size: 12px;
+  margin: 5px;
+  margin-top: 0px;
+  padding: 5px;
+  max-width: 80%;
 }
 
 .card-body {
-  padding: 2px, 2px, 2px, 15px;
+  padding: 0px;
   height: 75px;
+}
+
+#search-city {
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+#search-text-input {
+  font-family: "Poiret One", cursive;
+  text-transform: lowercase;
+  font-stretch: expanded;
+  color: darkgrey;
 }
